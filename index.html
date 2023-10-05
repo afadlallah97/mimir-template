@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
+  <link rel="stylesheet" href="src\index.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <body>
-    <div id="root"></div>
+    <div class="container">
+      <div class="header row">
+        <h6 class="left">Mimir</h6>
+        <a class="right" href="#link">Manage Cards</a>
+      </div>
+      <div class="content">
+        <div>
+          <div id="Form" class="form row">
+            <div class="input-container">
+              <input
+                type="text"
+                name="Front"
+                placeholder="Front"
+                class="col s5 user-info"
+              />
+              <input
+                type="text"
+                name="Back"
+                placeholder="Back"
+                class="col s5 user-info"
+              />
+            </div>
+            <div class="col s2 save-actions">
+              <button name="Save">Save</button>
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                name="Filter"
+                value="filter"
+                id="filter-checkbox"
+              />
+              <label for="Filter">Filter Table</label>
+            </div>
+          </div>
+          <div class="Main-Grid">
+            <div class="row">
+              <strong class="col s5">Front ▲</strong>
+              <strong class="col s5">Back ▼</strong>
+            </div>
+
+            <div class="row">
+              <span class="col s5">7ot</span>
+              <span class="col s5">3ade</span>
+              <button name="Delete" class="col s2">Delete</button>
+            </div>
+            <div class="row">
+              <span class="col s5">8ada</span>
+              <span class="col s5">3arabi</span>
+              <button name="Delete" class="col s2">Delete</button>
+            </div>
+            <div class="row">
+              <span class="col s5">5ase</span>
+              <span class="col s5">shay</span>
+              <button name="Delete" class="col s2">Delete</button>
+            </div>
+            <div class="row">
+              <span class="col s5">2itali</span>
+              <span class="col s5">kloka atte</span>
+              <button name="Delete" class="col s2">Delete</button>
+            </div>
+            <div class="row">
+              <span class="col s5">comolè</span>
+              <span class="col s5">Bon8i</span>
+              <button name="Delete" class="col s2">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="filter row">
+        <label for="card-side">Filter by Side:</label>
+        <select id="card-side">
+          <option value="front">Front</option>
+          <option value="back">Back</option>
+        </select>
+      </div>-->
+      <div class="card-list" id="card-list">
+        <!-- Cards will be dynamically added here -->
+      </div>
+      <!--<button id="add-card">Add Card</button> -->
+    </div>
   </body>
 </html>
